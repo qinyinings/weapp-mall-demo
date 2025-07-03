@@ -1,0 +1,71 @@
+/* pages/todoList/todoList.wxss */
+
+.todo-list-container {
+  padding: 20rpx;
+}
+
+.todo-list-input {
+  display: flex;
+  align-items: center;
+}
+
+.todo-list-input input {
+  flex: 1;
+  margin-right: 20rpx;
+  border: 1rpx solid #eeeeee;
+  padding: 15rpx;
+}
+
+.todo-list-input button {
+  width: fit-content;
+}
+
+.todoList {
+  margin-top: 50rpx;
+  border-bottom: 1px solid #eeeeee;
+}
+
+.todoList-tr {
+  display: flex;
+  align-items: center;
+  border-top: 1px solid #eeeeee;
+  border-left: 1px solid #eeeeee;
+}
+
+.todoList-td {
+  flex: 1 1 0;
+  padding: 20rpx 15rpx;
+  text-align: center;
+  border-right: 1px solid #eeeeee;
+}
+
+.todoList-td button {
+  width: fit-content;
+}
+
+.todoList-tr.thead > .todoList-td {
+  font-weight: bold;
+}
+
+.sucTag {
+  display: inline-block;
+  color: green;
+  background-color: rgb(166, 209, 166);
+  padding: 10rpx;
+  font-size: 24rpx;
+  border-radius: 10rpx;
+  border: 1rpx solid rgb(230, 243, 230);
+  width: 80rpx;
+}
+
+.pendingTag {
+  display: inline-block;
+  color: grey;
+  background-color: rgb(175, 175, 175);
+  padding: 10rpx;
+  font-size: 24rpx;
+  border-radius: 10rpx;
+  border: 1rpx solid rgb(212, 212, 212);
+  width: 80rpx;
+  height: min-content;
+}

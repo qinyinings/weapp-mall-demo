@@ -1,6 +1,6 @@
 {
   "files.associations": {
-      "*.wxml": "html",
+      "*.wxml": "wxml",
       "*.wxss": "css"
   },
   "minapp-vscode.wxmlFormatter": "prettier",
@@ -35,9 +35,6 @@
   // 代码折叠
   "editor.foldingStrategy": "indentation",
   
-  // 缩进指南
-  "editor.renderIndentGuides": true,
-  
   // 空格显示
   "editor.renderWhitespace": "boundary",
   
@@ -48,5 +45,6 @@
   "files.encoding": "utf8",
   
   // 换行符
-  "files.eol": "\n"
+  "files.eol": "\n",
+  "editor.guides.indentation": true
 }

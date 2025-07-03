@@ -1,0 +1,36 @@
+<!--pages/todoList/todoList.wxml-->
+<view class="todo-list-container">
+  <view class="todo-list-input">
+    <input
+      type="text"
+      placeholder="请输入内容"
+      value="{{ inputValue }}"
+      bindinput="handleInputChange"
+      bindconfirm="handleAdd"
+    />
+    <button bindtap="handleAdd">添加</button>
+  </view>
+  <view class="todoList">
+    <view class="todoList-tr thead">
+      <view class="todoList-td">待办事项名</view>
+      <view class="todoList-td">状态</view>
+      <view class="todoList-td">操作</view>
+    </view>
+    <view class="todoList-tr tbody" wx:for="{{ todoList }}" wx:key="id">
+      <view class="todoList-td">{{ item.title }}</view>
+      <view
+        class="todoList-td"
+        bindtap="handleToggleStatus"
+        data-id="{{ item.id }}"
+        data-status="{{ item.completed }}"
+      >
+        <view class="{{ item.completed ? 'sucTag' : 'pendingTag' }}">
+          {{ item.completed ? '已完成' : '待完成' }}
+        </view>
+      </view>
+      <view class="todoList-td">
+        <button bindtap="handleDelete" data-id="{{ item.id }}">删除</button>
+      </view>
+    </view>
+  </view>
+</view>
